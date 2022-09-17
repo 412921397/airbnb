@@ -1,0 +1,12 @@
+/dist/*
+.local
+.output.js
+.package-lock.json
+.package.json
+.pnpm-lock.yaml
+/node_modules/**
+
+**/*.svg
+**/*.sh
+
+/public/*
