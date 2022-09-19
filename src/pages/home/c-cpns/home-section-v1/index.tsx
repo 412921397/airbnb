@@ -16,7 +16,7 @@ const HomeSectionV1: FC<IProps> = memo((props) => {
     <SectionV1Wrapper>
       <SectionHeader title={infoData.title} subtitle={infoData.subtitle} />
       <SectionRooms roomList={infoData.list} itemWidth="25%" />
-      <SectionFooter />
+      <SectionFooter name={infoData.title} />
     </SectionV1Wrapper>
   );
 });

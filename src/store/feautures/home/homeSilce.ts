@@ -20,9 +20,28 @@ const homeSlice = createSlice({
     },
     changeHighScoreInfoAction(state, { payload }) {
       state.highScoreInfo = payload;
+    },
+    changeDiscountInfoAction(state, { payload }) {
+      state.discountInfo = payload;
+    },
+    changeRecommendInfoAction(state, { payload }) {
+      state.recommendInfo = payload;
+    },
+    changeLongforInfoAction(state, { payload }) {
+      state.longforInfo = payload;
+    },
+    changePlusInfoAction(state, { payload }) {
+      state.plusInfo = payload;
     }
   }
 });
 
-export const { changeGoodPriceAction, changeHighScoreInfoAction } = homeSlice.actions;
+export const {
+  changeGoodPriceAction,
+  changeHighScoreInfoAction,
+  changeDiscountInfoAction,
+  changeRecommendInfoAction,
+  changeLongforInfoAction,
+  changePlusInfoAction
+} = homeSlice.actions;
 export default homeSlice.reducer;

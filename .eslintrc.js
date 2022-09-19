@@ -18,6 +18,7 @@ module.exports = {
     'prettier/prettier': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
     'no-empty-function': 1, // 禁止出现空函数
-    'jsx-a11y/anchor-is-valid': 'off' //注销a标签的警告
+    'jsx-a11y/anchor-is-valid': 'off', //注销a标签的警告
+    '@typescript-eslint/no-non-null-assertion': 'off'
   }
 };
