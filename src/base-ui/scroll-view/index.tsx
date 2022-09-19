@@ -15,7 +15,7 @@ const ScrollView: FC<IProps> = memo((props) => {
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(false);
   const [posIndex, setPosIndex] = useState(0);
-  const totalDistanceRef = useRef<number>(0);
+  const totalDistanceRef = useRef<number>(0); // 需要滑动的距离，(存储状态值,不重复渲染render函数，对组件可以做到一定的性能优化)
   const scrollContentRef = useRef<HTMLDivElement>(null);
 
   /** 组件渲染完毕, 判断是否显示右侧的按钮 */
