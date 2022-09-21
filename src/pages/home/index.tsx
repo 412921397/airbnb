@@ -5,7 +5,7 @@ import { fetchHomeDataAction } from '@/store/feautures/home/actionCreators';
 import HomeBanner from './c-cpns/home-banner';
 import HomeSectionV1 from './c-cpns/home-section-v1';
 import HomeSectionV2 from './c-cpns/home-section-v2';
-import HomeSectionV3 from './c-cpns/home-section-v3/idnex';
+import HomeSectionV3 from './c-cpns/home-section-v3';
 import HomeLonfor from './c-cpns/home-longfor';
 import { HomeWrapper } from './style';
 import { isEmptyOJB } from '@/utils';

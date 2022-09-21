@@ -1,3 +1,6 @@
 export interface IInitialState {
-  name: string;
+  currentPage: number;
+  roomList: any[];
+  totalCount: number;
+  isLoading: boolean;
 }

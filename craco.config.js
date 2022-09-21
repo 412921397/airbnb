@@ -7,7 +7,15 @@ module.exports = {
   // less
   plugins: [
     {
-      plugin: CracoLessPlugin
+      plugin: CracoLessPlugin,
+      options: {
+        lessLoaderOptions: {
+          lessOptions: {
+            modifyVars: {},
+            javascriptEnabled: true
+          }
+        }
+      }
     }
   ],
   webpack: {

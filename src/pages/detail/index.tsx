@@ -1,7 +1,16 @@
 import { FC, memo } from 'react';
+import DetailInfos from './c-cpns/detail-infos';
+import DetailPicture from './c-cpns/detail-pictures';
+
+import { DetailWrapper } from './style';
 
 const Detail: FC = memo(() => {
-  return <div>Detail</div>;
+  return (
+    <DetailWrapper>
+      <DetailInfos />
+      <DetailPicture />
+    </DetailWrapper>
+  );
 });
 
 export default Detail;

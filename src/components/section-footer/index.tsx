@@ -17,6 +17,7 @@ const SectionFooter: FC<IProps> = memo((props) => {
   const navigate = useNavigate();
   const moreClickHandle = () => {
     navigate('/entire');
+    window.scroll(0, 0);
   };
 
   return (
