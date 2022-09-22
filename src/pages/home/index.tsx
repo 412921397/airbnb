@@ -9,6 +9,7 @@ import HomeSectionV3 from './c-cpns/home-section-v3';
 import HomeLonfor from './c-cpns/home-longfor';
 import { HomeWrapper } from './style';
 import { isEmptyOJB } from '@/utils';
+import { changeHeaderConfigAction } from '@/store/feautures/main';
 
 const Home: FC = memo(() => {
   const { goodPriceInfo, highScoreInfo, discountInfo, recommendInfo, longforInfo, plusInfo } =
@@ -28,6 +29,7 @@ const Home: FC = memo(() => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchHomeDataAction());
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: true }));
   }, [dispatch]);
 
   return (

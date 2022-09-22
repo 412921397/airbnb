@@ -1,6 +1,7 @@
 # react18+ts+rtk
 
 - rtx 管理全局状态的 pc 项目
+- 详情页封装了图片查看器
 
 # Getting Started with Create React App
 

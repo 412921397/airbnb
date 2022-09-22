@@ -1,5 +1,6 @@
 import { useDispatch } from '@/store';
 import { fetchRoomListAction } from '@/store/feautures/entire';
+import { changeHeaderConfigAction } from '@/store/feautures/main';
 import { FC, memo, useEffect } from 'react';
 
 import EntireFilter from './c-cpns/entire-filter';
@@ -11,6 +12,7 @@ const Entire: FC = memo(() => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRoomListAction(0));
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: false }));
   }, [dispatch]);
 
   return (

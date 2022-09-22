@@ -9,7 +9,6 @@ const HeaderLeft: FC = memo(() => {
 
   const clickHandle = () => {
     navigate('/home');
-    window.scroll(0, 0);
   };
   return (
     <LeftWrapper>
