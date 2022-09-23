@@ -27,6 +27,7 @@
     "react-transition-group": "^4.4.5",
     "styled-components": "^5.3.5",
     "typescript": "^4.8.3",
+    "underscore": "^1.13.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -61,6 +62,7 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@craco/craco": "^7.0.0-alpha.7",
     "@types/styled-components": "^5.1.26",
+    "@types/underscore": "^1.11.4",
     "commitizen": "^4.2.5",
     "craco-less": "^2.1.0-alpha.0",
     "cz-conventional-changelog": "^3.3.0",
