@@ -1,4 +1,4 @@
-import { FC, memo, useRef, useState } from 'react';
+import { FC, BaseSyntheticEvent, memo, useRef, useState } from 'react';
 
 import { Rating } from '@mui/material';
 import { Carousel } from 'antd';
@@ -26,7 +26,7 @@ const RoomItem: FC<IProps> = memo((props) => {
     if (itemClick) itemClick();
   };
 
-  const controlClickHandle = (isRight = true) => {
+  const controlClickHandle = (isRight: boolean, e: BaseSyntheticEvent) => {
     // 上一个面板/下一个面板
     !isRight ? sliderRef.current?.prev() : sliderRef.current?.next();
 
@@ -36,6 +36,9 @@ const RoomItem: FC<IProps> = memo((props) => {
     if (newIndex < 0) newIndex = length - 1;
     if (newIndex > length - 1) newIndex = 0;
     setSelectIndex(newIndex);
+
+    // 阻止冒泡事件
+    e.stopPropagation();
   };
 
   const pictureElement = (
@@ -47,10 +50,10 @@ const RoomItem: FC<IProps> = memo((props) => {
   const sliderElement = (
     <div className="slider">
       <div className="control">
-        <div className="btn left" onClick={() => controlClickHandle(false)}>
+        <div className="btn left" onClick={(e) => controlClickHandle(false, e)}>
           <IconArrowLeft width={30} height={30} />
         </div>
-        <div className="btn right" onClick={() => controlClickHandle()}>
+        <div className="btn right" onClick={(e) => controlClickHandle(true, e)}>
           <IconArrowRight width={30} height={30} />
         </div>
       </div>
