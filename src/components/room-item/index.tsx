@@ -1,8 +1,8 @@
-import { FC, BaseSyntheticEvent, memo, useRef, useState } from 'react';
+import { memo, useRef, useState } from 'react';
+import type { FC, BaseSyntheticEvent, ElementRef } from 'react';
 
 import { Rating } from '@mui/material';
 import { Carousel } from 'antd';
-import type { CarouselRef } from 'antd/lib/carousel/index.d';
 import classNames from 'classnames';
 
 import IconArrowLeft from '@/assets/svg/icon-arrow-left';
@@ -16,10 +16,10 @@ interface IProps {
   itemClick?: () => void;
 }
 
-const RoomItem: FC<IProps> = memo((props) => {
+const RoomItem: FC<IProps> = (props) => {
   const { itemData, itemWidth = '25%', itemClick } = props;
 
-  const sliderRef = useRef<CarouselRef>(null);
+  const sliderRef = useRef<ElementRef<typeof Carousel>>(null);
   const [selectIndex, setSelectIndex] = useState(0);
 
   const itemClickHandle = () => {
@@ -105,6 +105,6 @@ const RoomItem: FC<IProps> = memo((props) => {
       </div>
     </ItemWrapper>
   );
-});
+};
 
-export default RoomItem;
+export default memo(RoomItem);
